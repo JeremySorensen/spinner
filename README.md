@@ -4,18 +4,18 @@ To use the Big Wheel go to http://JeremySorensen.github.io
 
 Use of the site is restricted to non commercial personal and church use.
 
-You can also download the whole folder as a zip file from this github page. If you open index.html in a web browser it will work without an internet connection.
+You can also download the whole folder as a zip file from this github page (Scroll up and find the green "Clone or download" button, click it and then click "Download Zip). If you open index.html in a web browser it will work without an internet connection.
 
 Choose which version you want and mirror your display onto a TV using HDMI, Apple TV or something.
 
-This is a primary activity where kids tap the wheel (on the device screen) to spin it and it chooses how the song will be sung.
-There are two versions, one which requires full size Rolo rolls and fun-size 3 musketeers bars and one that doesn't require any candy.
+This is a activity where kids tap the wheel (on the device screen) to spin it and it chooses how a song will be sung.
+There are two versions, one which requires candy bars (full size Rolo packs and fun-size 3 Musketeers bars) and one that doesn't require any candy.
 
 The ways to sing are:
 
  * Buzz Like a Bee
  * Stick Your Tongue Out
- * New First Letter - Start every word with the same letter, carefull which letter you choose. Don't use F, S, D or some other letters. J, W, Z, M should be good.
+ * New First Letter - Start every word with the same letter, be careful which letter you choose. Don't use F, S, D or some other letters. J, W, Z, M should be good.
  * Stand On One Foot
  * Rub Belly, Pat Head
  * Teachers vs Kids - The teachers sing, then the kids, take a vote at the end (the kids always win because they have more votes)
