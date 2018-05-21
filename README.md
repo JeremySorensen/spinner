@@ -1,6 +1,7 @@
 # JeremySorensen.github.io
 
-The use the Big Wheel go to http://JeremySorensen.github.io
+To use the Big Wheel go to http://JeremySorensen.github.io
+
 Use of the site is restricted to non commercial personal and church use.
 
 You can also download the whole folder as a zip file from this github page. If you open index.html in a web browser it will work without an internet connection.
