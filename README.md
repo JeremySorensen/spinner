@@ -1,12 +1,13 @@
 # JeremySorensen.github.io
 
 The use the Big Wheel go to http://JeremySorensen.github.io
+Use of the site is restricted to non commercial personal and church use.
 
 You can also download the whole folder as a zip file from this github page. If you open index.html in a web browser it will work without an internet connection.
 
+Choose which version you want and mirror your display onto a TV using HDMI, Apple TV or something.
 
-This is a primary activity where kids tap the wheel to spin it and it chooses how the song will be sung.
-The code is just a combination of several stack overflow posts, which are in the comments.
+This is a primary activity where kids tap the wheel (on the device screen) to spin it and it chooses how the song will be sung.
 There are two versions, one which requires full size Rolo rolls and fun-size 3 musketeers bars and one that doesn't require any candy.
 
 The ways to sing are:
@@ -24,8 +25,8 @@ The ways to sing are:
  * Soft
  * Fast
  No candy only:
-  * Opera - sing like an opera singer
-  * Every other word - One side of the room sings the even words, the other sings the odd ones. For more challenge everyone sings only the even, or only the odd words.
+ * Opera - sing like an opera singer
+ * Every other word - One side of the room sings the even words, the other sings the odd ones. For more challenge everyone sings only the even, or only the odd words.
   
 To change the words you have to edit the files, either candy.html or nocandy.html in Notepad (not word or something like that.)
   
@@ -40,6 +41,9 @@ var words = ["Buzz Like a Bee", "Stick Your Tongue Out", "New First Letter",
 ```
 
 And change the items in Quotes. If you use the folder locally (see part above) that will just work. To make it available online, you will have to fork the project on Github. (Look up tutorials.) If you have a set of items you desparately want me to put online email me and I can put up a new version.             
-  
+
+The code is just a combination of several stack overflow posts, which are in the comments.
+
+The code is Licensed under Apache 2 or MIT at your option. 
   
 
