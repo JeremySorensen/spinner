@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8">
 <title>The Big Wheel - With Candy!</title>
+<style>
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}	
+</style>
 <script type="text/javascript">
 
 // https://stackoverflow.com/a/29190009
@@ -123,7 +133,7 @@ function play(){
 </script>
 </head>
 <body onload="init()">
-	<canvas id="testCanvas" width="600" height="600">
+	<canvas class="center-screen" id="testCanvas" width="600" height="600">
 		Canvas not supported
 	</canvas>
     <audio id="audio" src="sound.mp3" ></audio>
