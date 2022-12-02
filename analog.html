@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Big Wheel - LTpowerPlay</title>
+<style>
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}	
+</style>
+<script type="text/javascript">
+
+// https://stackoverflow.com/a/29190009
+// https://stackoverflow.com/a/5400970
+// https://stackoverflow.com/a/12646864
+// https://stackoverflow.com/a/35626468
+
+var words = ["Sequencing", "Margining", "Supervision", 
+             "Monitoring/Telemetry", "WTF", "Why am I off?", 
+             "Board Bring-up", "Rise Time Debugger", "WAY TOO MANY RAILS!"];
+var colors = ["Red", "YellowGreen", "MediumPurple",
+              "Orange", "CornFlowerBlue", "Yellow", 
+              "Pink", "White", "SkyBlue"];
+var rotation = 0;
+var delta = 0;
+var radius = 240;
+
+/**
+ * Randomize array element order in-place.
+ * Using Durstenfeld shuffle algorithm.
+ */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+function init() {
+  shuffleArray(words);
+  
+  canvas = document.getElementById("testCanvas");
+  canvas.addEventListener('click', () => {
+   play();
+   delta = 0.18 + Math.random() * 0.04;
+   requestAnimationFrame(drawWheel);
+  });
+  context = canvas.getContext("2d");
+
+  drawWheel(false);
+  drawTriangle();
+  
+  
+}
+
+function drawSector(text, angle, subtend) {
+    context.save();
+    context.rotate(angle);
+    context.beginPath();
+    context.moveTo(0, 0);
+    context.arc(0, 0, radius, -subtend/2, subtend/2, false);
+    context.fillStyle = colors[i];
+    context.fill();
+    context.textAlign = "center";
+    context.fillStyle = "Black";
+    context.font = context.font.replace(/\d+px/, "16px");
+    context.fillText(text, radius * 0.6, 6);
+    context.restore();
+}
+
+function drawWheel(animate) {
+
+  // reset transforms before clearing
+  context.save();
+
+  // translate and rotate an absolute rotation value
+  context.translate(300, 300);
+  context.rotate(rotation);
+
+  subtend = 2 * Math.PI / words.length;
+  
+  // draw arcs
+  for (i = 0; i < words.length; i++) {
+    drawSector(words[i], i*subtend, subtend);
+  }
+  context.beginPath();
+  context.arc(0, 0, radius, 0, Math.PI * 2, false);
+  context.lineWidth = 8;
+  context.stroke();
+  
+  context.beginPath();
+  context.arc(0, 0, radius / 10.0, 0, Math.PI * 2, false);
+  context.lineWidth = 8;
+  context.fillStyle = "Gray";
+  context.fill();
+
+  context.restore();
+  
+  // update rotation value and request new frame
+  if (animate) {
+     rotation += delta;
+     delta -= 0.001
+     requestAnimationFrame(()=>drawWheel(delta > 0))
+  }
+}
+
+function drawTriangle() {
+    context.beginPath();
+    context.moveTo(540, 300);
+    context.lineTo(595, 330);
+    context.lineTo(595, 270);
+    context.lineTo(540, 300);
+    context.fillStyle = "gray";
+    context.lineWidth = 5;
+    context.fill();
+    context.stroke();
+}
+
+function play(){
+  var audio = document.getElementById("audio");
+  audio.play();
+}
+
+</script>
+</head>
+<body onload="init()">
+	<canvas class="center-screen" id="testCanvas" width="600" height="600">
+		Canvas not supported
+	</canvas>
+    <audio id="audio" src="sound.mp3" ></audio>
+</body>
+</html>
